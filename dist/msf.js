@@ -146,10 +146,9 @@ const msfController = {
     };
 
     const setEventListeners = () => {
-      //msf.next.addEventListener("click", nextClick);
-      //msf.back.addEventListener("click", backClick);
-      this.next.addEventListener("click", nextClick);
-      this.back.addEventListener("click", backClick);
+      msf.next.addEventListener("click", nextClick);
+      msf.back.addEventListener("click", backClick);
+
       if (msf.hiddenForm) {
         msf.rightArrow.addEventListener(
           "click",
@@ -164,6 +163,7 @@ const msfController = {
     };
 
     const nextClick = () => {
+      console.log("click from msf.js");
       const filledFields = checkRequiredInputs(msf.currentStep);
 
       if (filledFields) {
